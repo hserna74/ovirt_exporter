@@ -29,9 +29,9 @@ var (
 	apiPass         = flag.String("api.password", "", "API password")
 	apiPassFile     = flag.String("api.password-file", "", "File containing the API password")
 	apiInsecureCert = flag.Bool("api.insecure-cert", false, "Skip verification for untrusted SSL/TLS certificates")
-	withSnapshots   = flag.Bool("with-snapshots", true, "Collect snapshot metrics (can be time consuming in some cases)")
-	withNetwork     = flag.Bool("with-network", true, "Collect network metrics (can be time consuming in some cases)")
-	withDisks       = flag.Bool("with-disks", true, "Collect disk metrics (can be time consuming in some cases)")
+	withSnapshots   = flag.Bool("with-snapshots", false, "Collect snapshot metrics (can be time consuming in some cases)")
+	withNetwork     = flag.Bool("with-network", false, "Collect network metrics (can be time consuming in some cases)")
+	withDisks       = flag.Bool("with-disks", false, "Collect disk metrics (can be time consuming in some cases)")
 	debug           = flag.Bool("debug", false, "Show verbose output (e.g. body of each response received from API)")
 
 	collectorDuration = prometheus.NewHistogramVec(
